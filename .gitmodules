@@ -1,0 +1,3 @@
+[submodule "site/modules/FileValidatorSvgSanitizer"]
+	path = site/modules/FileValidatorSvgSanitizer
+	url = git@github.com:ryancramerdesign/FileValidatorSvgSanitizer.git

@@ -1,0 +1,10 @@
+/.idea
+/node_modules
+.env
+
+/site/assets/backups
+/site/assets/cache
+/site/assets/logs
+/site/assets/sessions
+
+/site/config.php

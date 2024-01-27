@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  web:
+    build:
+      context: ./build
+      args:
+        PROCESSWIRE_VERSION: ${PW_VERSION}
+        WWWDATA_USER_ID: ${WEB_USER_ID}
+    ports:
+      - "8080:80"
+    depends_on:
+      - database
+    volumes:
+      - ./site:/var/www/html/site:rw
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html
+  database:
+    image: mariadb:10.6
+    volumes:
+      - database:/var/lib/mysql:rw
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: docker
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - database
+    ports:
+      - "8081:80"
+    environment:
+      PMA_USER: docker
+      PMA_PASSWORD: docker
+      PMA_PORT: 3306
+      PMA_HOST: database
+volumes:
+  database:

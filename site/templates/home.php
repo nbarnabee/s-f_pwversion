@@ -11,5 +11,6 @@
 ?>
 
 <div id="content">
-	Homepage content 
-</div>	
+  <h3><?= $page->title ?></h3>
+  <p><?= $page->textarea ?></p>
+</div>

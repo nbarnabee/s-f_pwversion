@@ -1,0 +1,14 @@
+#content,
+nav {
+  margin-inline: 5rem;
+}
+
+header {
+  margin-inline: 3rem;
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

@@ -3,7 +3,7 @@
 set -e
 
 # the name or id of the database container for this composition
-DB_CONTAINER=_database_container_name_or_id_
+DB_CONTAINER=s-f_pwversion-database-1
 
 # one way to get the above automatically
 # this only works if there is only one running container with 'database' in it's name
